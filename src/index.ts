@@ -40,7 +40,7 @@ const main = async () => {
         app
     })
 
-    app.listen(4000, () =>
+    app.listen(env.MongoBasePort, () =>
         console.log('Server is running on http://localhost:4000/graphql')
     )
 }
