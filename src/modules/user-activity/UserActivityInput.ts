@@ -1,15 +1,25 @@
-import { InputType, Field, ID } from 'type-graphql';
-import { ObjectId } from 'mongodb';
-import { UserActivity } from '../../entities/UserActivity';
-import { EUserActivityEventType } from '../../models/EUserActivityEventType';
+import {
+  InputType,
+  Field,
+  ID
+} from 'type-graphql';
+import {
+  ObjectId
+} from 'mongodb';
+import {
+  UserActivity
+} from '../../entities/UserActivity';
+import {
+  EUserActivityEventType
+} from '../../models/EUserActivityEventType';
 
 @InputType()
-export class UserActivityInput implements Partial<UserActivity> {
+export class UserActivityInput implements Partial < UserActivity > {
   @Field()
   timestamp: Date;
 
   @Field()
-  eventType?: EUserActivityEventType;
+  eventType: EUserActivityEventType;
 
   @Field()
   page: string;

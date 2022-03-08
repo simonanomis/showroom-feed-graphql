@@ -1,9 +1,16 @@
-import { InputType, Field } from 'type-graphql';
-import { Length } from 'class-validator';
-import { Board } from '../../entities/Board';
+import {
+  InputType,
+  Field
+} from 'type-graphql';
+import {
+  Length
+} from 'class-validator';
+import {
+  Board
+} from '../../entities/Board';
 
 @InputType()
-export class BoardInput implements Partial<Board> {
+export class BoardInput implements Partial < Board > {
   @Field()
   title: String;
 
